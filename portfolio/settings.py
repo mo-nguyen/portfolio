@@ -84,6 +84,13 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'portfolio',
+        "CLIENT": {
+            "host": "mongodb+srv://portfolio.ogio9lh.mongodb.net",
+            "port": 27017,
+            "username": "portfolio_db_admin",
+            "password": "123456x@X",
+            "authSource": "admin",
+        },
     }
 }
 

@@ -1,0 +1,17 @@
+#nav-bar>ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    background-color: #a12a2e;
+    height: 100px;
+    position: fixed;
+    width: 100%;
+}
+
+a {
+    color: #ebe8e8;
+    font-size: 35px;
+    font-weight: bold;
+}
