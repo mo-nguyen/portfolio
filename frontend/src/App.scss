@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+
+h1.title {
+    color: #242d29;
+    font-weight: bold;
+    font-size: 80px;
+}
+
+body {
+    background-color: #242d29;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: .8;
+}
+
+.container {
+    margin-top: 100px;
+    padding: 10px 0;
+    z-index: -1;
+}

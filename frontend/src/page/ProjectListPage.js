@@ -1,21 +1,36 @@
-import React, {useState, useEffect} from 'react'
+import Row from "react-bootstrap/Row";
+import "./ProjectListPage.scss";
+import ProjectCard from "../component/ProjectCard";
+import Col from "react-bootstrap/Col";
 
 const ProjectListPage = () => {
-    let [projects, setProjects] = useState([])
-    useEffect(() => {
-        getProjects()
-    }, [])
-
-    let getProjects = async () => {
-        let response = await fetch('api/get-projects/')
-        let data = await response.json()
-        console.log(data)
-        setProjects(data)
-    }
-
     return (
-    <div>ProjectListPage</div>
-  )
-}
+        <div>
+            <Row>
+                <h1 className="title">Projects</h1>
+            </Row>
+            <Row className="justify-content-md-between">
+                <Col md={4}>
+                    <ProjectCard />
+                </Col>
+                <Col md={4}>
+                    <ProjectCard />
+                </Col>
+                <Col md={4}>
+                    <ProjectCard />
+                </Col>
+                <Col md={4}>
+                    <ProjectCard />
+                </Col>
+                <Col md={4}>
+                    <ProjectCard />
+                </Col>
+                <Col md={4}>
+                    <ProjectCard />
+                </Col>
+            </Row>
+        </div>
+    );
+};
 
-export default ProjectListPage
+export default ProjectListPage;

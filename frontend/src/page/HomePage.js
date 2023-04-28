@@ -1,29 +1,24 @@
-import './HomePage.css'
+import './HomePage.scss'
 import React from 'react'
-import Navigation from '../component/Navigation'
-import Footer from '../component/Footer'
 import education_presents_image from '../assert/education_presents.JPG';
-import { Router } from 'react-router-dom';
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 const HomePage = () => {
   return (
-    <Router>
-      <Navigation />    
-      <div className='body-container'>
-        <div className='row'>
-          <div className='col-left'>
-            <h1>The Intro</h1>
+      <div className='home-container'>
+        <Row className='align-items-md-center'>
+          <Col>
+            <h1 className='title'>The Intro</h1>
             <p>
             Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
             </p>
-          </div>
-          <div className='col-right'>
+          </Col>
+          <Col>
             <img src={education_presents_image} alt='test'/>
-          </div>
-        </div>
+          </Col>
+        </Row>
       </div>
-      <Footer />
-    </Router>
   )
 }
 

@@ -1,0 +1,31 @@
+.full-height {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 3;
+}
+
+.full-height>.row {
+    min-height: 500px;
+    padding: 0 30px;
+}
+
+.full-height>.row:nth-child(1) {
+    background-color: #a12a2e;
+}
+
+.full-height>.row:nth-child(2) {
+    background-color: #ebe8e8;
+}
+
+.full-height>.row:nth-child(3) {
+    background-color: #242d29;
+}
+
+.full-height>.row:nth-child(4) {
+    background-image: url("../assert/flower.JPG");
+    background-repeat: no-repeat;
+    background-position-y: 30%;
+    background-size: cover;
+    height: 600px;
+}

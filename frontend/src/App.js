@@ -1,19 +1,19 @@
-import './App.css';
-// import ProjectCard from './component/ProjectCard';
-// import ProjectListPage from './page/ProjectListPage';
-// import HomePage from './page/HomePage';
-import WelcomePage from './page/WelcomePage';
-import {
-  BrowserRouter as Router,
-  Route,
-} from "react-router-dom";
+import { Outlet } from "react-router";
+import "./App.scss";
+import Navigation from "./component/Navigation";
+import Container from "react-bootstrap/Container";
+import Footer from "./component/Footer";
 
 function App() {
-  return (
-    <Router>
-      <Route path="/" exact component={WelcomePage} />
-    </Router>
-  )
+    return (
+        <div>
+            <Navigation />
+            <Container>
+				<Outlet />
+			</Container>
+			<Footer />
+        </div>
+    );
 }
 
 export default App;
