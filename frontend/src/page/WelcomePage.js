@@ -2,13 +2,12 @@ import "./WelcomePage.scss";
 import React from "react";
 import cicada from "../assert/cicada.JPG";
 import arrow from "../assert/animated-arrow.gif";
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 const WelcomePage = () => {
     return (
-        <Container>
+        <div className="welcome-container">
             <Row>
                 <h1 id="main-title">
                     MO'S
@@ -35,7 +34,7 @@ const WelcomePage = () => {
                     <img src={cicada} alt="cicada" id="cicada" />
                 </Col>
             </Row>
-        </Container>
+        </div>
     );
 };
 

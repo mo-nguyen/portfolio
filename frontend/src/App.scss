@@ -10,10 +10,6 @@ h1.title {
     font-size: 80px;
 }
 
-body {
-    background-color: #242d29;
-}
-
 a {
     text-decoration: none;
 }
@@ -26,4 +22,9 @@ a:hover {
     margin-top: 100px;
     padding: 10px 0;
     z-index: -1;
+}
+
+img {
+    width: 100%;
+    border-radius: 2rem;
 }

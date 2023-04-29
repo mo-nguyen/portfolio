@@ -1,3 +1,30 @@
-body {
-    background-color: #ebe8e8;
+.project-cards {
+    .col-md-4:nth-child(3n-2) {
+        .card {
+            background-color: #a12a2e;
+            border: 2px solid #a12a2e;
+        }
+    }
+
+    .col-md-4:nth-child(3n-1) {
+        .card {
+            background-color: #242d29;
+            border: 2px solid #242d29;
+        }
+    }
+
+    .card-title>a, .card-text, .card-subtitle {
+        color: #ebe8e8;
+    }
+
+    .col-md-4:nth-child(3n) {
+        .card {
+            border: 2px solid #242d29;
+            background-color: #ebe8e8;
+
+            .card-title>a, .card-text, .card-subtitle {
+                color: #242d29;
+            }
+        }
+    }
 }

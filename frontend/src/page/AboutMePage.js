@@ -7,6 +7,7 @@ import employer_id_card_image from "../assert/employer_id_card.JPG";
 import bee_image from "../assert/bee.JPG";
 
 function AboutMePage() {
+    document.querySelector("body").style.backgroundColor = "none";
     return (
         <div className="full-height">
             <Row className="align-items-md-center">

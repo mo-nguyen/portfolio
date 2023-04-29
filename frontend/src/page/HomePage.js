@@ -5,6 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 const HomePage = () => {
+  document.querySelector("body").style.backgroundColor = "#242d29";
   return (
       <div className='home-container'>
         <Row className='align-items-md-center'>
