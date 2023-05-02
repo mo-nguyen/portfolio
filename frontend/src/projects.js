@@ -1,36 +1,47 @@
+function getCSRFToken() {
+    const csrfToken = document.cookie
+        .split(";")
+        .map((c) => c.trim())
+        .find((c) => c.startsWith("csrftoken="))
+        .split("=")[1];
+    return csrfToken;
+}
+
 function fetchProjects() {
-    return fetch("http://localhost:8000/api/projects/", {
+    return fetch("/api/projects/", {
         method: "GET",
     });
 }
 
 function fetchProjectById(projectId) {
-    return fetch(`http://localhost:8000/api/project/${projectId}`, {
+    return fetch(`/api/project/${projectId}`, {
         method: "GET",
     });
 }
 
 function fetchUpdateProject(projectId, data) {
-    return fetch(`http://localhost:8000/api/project/${projectId}`, {
+    return fetch(`/api/project/${projectId}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",
+            "X-CSRFToken": getCSRFToken(),
         },
         body: JSON.stringify(data),
     });
 }
 
 function fetchTags() {
-    return fetch("http://localhost:8000/api/tags/", {
+    return fetch("/api/tags/", {
         method: "GET",
     });
 }
 
 function fetchCreateProject(data) {
-    return fetch("http://localhost:8000/api/project/", {
+    return fetch("/api/project/", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
+            "X-CSRFToken": getCSRFToken(),
         },
         body: JSON.stringify(data),
     });

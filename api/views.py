@@ -6,6 +6,8 @@ from .models import Project, Tag
 from rest_framework.response import Response
 from .serializers import ProjectSerializer, TagSerializer
 from rest_framework.status import HTTP_404_NOT_FOUND, HTTP_400_BAD_REQUEST, HTTP_201_CREATED
+from django.views.decorators.csrf import ensure_csrf_cookie, csrf_protect
+from django.utils.decorators import method_decorator
 # Create your views here.
 
 @api_view(['GET'])
@@ -26,7 +28,7 @@ class ProjectAPIView(APIView):
         except Exception:
             return Response({"message": "Project not found"}, status=HTTP_404_NOT_FOUND)
     
-
+    @method_decorator(csrf_protect, name="dispatch")
     def put(self, request, id):
         try:
             project = get_object_or_404(Project, pk=id)
@@ -45,6 +47,7 @@ class ProjectAPIView(APIView):
         except Exception:
             return Response({"message": "Project can not be updated"}, status=HTTP_400_BAD_REQUEST)
 
+    @method_decorator(csrf_protect, name="dispatch")
     def post(self, request):
         try:
             tag = request.data.get("tag")
@@ -56,3 +59,10 @@ class ProjectAPIView(APIView):
             return Response({"message": f"{project} was created successfully"}, status=HTTP_201_CREATED)
         except Exception:
             return Response({"message": Exception}, status=HTTP_400_BAD_REQUEST)
+
+
+@method_decorator(ensure_csrf_cookie, name="dispatch")
+class GetCSRFToken(APIView):
+
+    def get(self, request):
+        return Response({"success": "CSRF cookie set"})

@@ -10,7 +10,6 @@ import AboutMePage from './page/AboutMePage';
 import { loader as GetAllProjectsLoader } from './page/ProjectListPage';
 import { loader as ProjectFormLoader, action as ProjectFormAction } from './page/ProjectForm';
 import { loader as GetProjectByIdLoader } from './page/ProjectDetailPage';
-
 import ProjectForm from './page/ProjectForm';
 
 const router = createBrowserRouter([

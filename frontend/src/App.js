@@ -3,6 +3,7 @@ import "./App.scss";
 import Navigation from "./component/Navigation";
 import Container from "react-bootstrap/Container";
 import Footer from "./component/Footer";
+import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
     return (
