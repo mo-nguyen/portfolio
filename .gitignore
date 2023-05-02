@@ -21,3 +21,9 @@
 /frontend/npm-debug.log*
 /frontend/yarn-debug.log*
 /frontend/yarn-error.log*
+
+# pycache
+/api/__pycache__
+/api/__pycache__/*
+/portfolio/__pycache__
+/portfolio/__pycache__/*
