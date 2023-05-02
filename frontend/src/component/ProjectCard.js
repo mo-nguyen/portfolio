@@ -2,13 +2,14 @@ import React from 'react'
 import Card from "react-bootstrap/Card";
 import "./ProjectCard.scss"
 
-const ProjectCard = () => {
+const ProjectCard = (props) => {
   return (
     <Card >
       <Card.Body>
-        <Card.Title><a href='/project/1'>Project Title Long Long Long Title Name</a></Card.Title>
-        <Card.Text>Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.</Card.Text>
-        <Card.Subtitle>Tag: Python, Django</Card.Subtitle>
+        <Card.Title><a href={`project/${props.project.id}`}>{props.project.title}</a></Card.Title>
+        <Card.Text>{props.project.description}</Card.Text>
+        <Card.Subtitle>Tag: {props.project.tag.map(t=>t.name).join(", ")}</Card.Subtitle>
+        <Card.Link href={props.project.url}>{props.project.url}</Card.Link>
       </Card.Body>
     </Card>
   )

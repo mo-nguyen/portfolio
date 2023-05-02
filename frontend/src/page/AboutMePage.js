@@ -7,7 +7,6 @@ import employer_id_card_image from "../assert/employer_id_card.JPG";
 import bee_image from "../assert/bee.JPG";
 
 function AboutMePage() {
-    document.querySelector("body").style.backgroundColor = "none";
     return (
         <div className="full-height">
             <Row className="align-items-md-center">
@@ -18,7 +17,7 @@ function AboutMePage() {
                     <Row>
                         <h1 className="title">Education</h1>
                         <div>
-                            <h2>University of Information Techonology</h2>
+                            <h2>University of Information Technology</h2>
                             <ul>
                                 <li>Faculty: Information System</li>
                                 <li>Major: E-commerce</li>
@@ -67,6 +66,7 @@ function AboutMePage() {
                             <ul>
                                 <li>+84 354102640</li>
                                 <li>mo.nguyen.tmo@gmail.com</li>
+                                <li>https://github.com/mo-nguyen</li>
                                 <li>Ho Chi Minh City, Viet Nam</li>
                             </ul>
                         </div>
@@ -75,8 +75,7 @@ function AboutMePage() {
             </Row>
             <Row className="align-items-md-center">
                 <Col md={3}>
-                <h1 className="title">Thank you for visiting</h1>
-
+                    <h1 className="title">Thank you for visiting</h1>
                 </Col>
             </Row>
         </div>

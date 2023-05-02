@@ -1,8 +1,15 @@
-from rest_framework.serializers import ModelSerializer
-from .models import Project
+from rest_framework import serializers
+from .models import Project, Tag
 
 
-class ProjectSerializer(ModelSerializer):
+class TagSerializer(serializers.ModelSerializer):
+    class Meta: 
+        model = Tag
+        fields = '__all__'
+
+
+class ProjectSerializer(serializers.ModelSerializer):
+    tag = TagSerializer(read_only=True, many=True)
     class Meta:
         model = Project
         fields = '__all__'

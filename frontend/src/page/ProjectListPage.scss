@@ -13,7 +13,7 @@
         }
     }
 
-    .card-title>a, .card-text, .card-subtitle {
+    .card-title>a, .card-text, .card-subtitle, .card-link {
         color: #ebe8e8;
     }
 
@@ -22,7 +22,7 @@
             border: 2px solid #242d29;
             background-color: #ebe8e8;
 
-            .card-title>a, .card-text, .card-subtitle {
+            .card-title>a, .card-text, .card-subtitle, .card-link {
                 color: #242d29;
             }
         }

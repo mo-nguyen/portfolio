@@ -1,0 +1,54 @@
+.project-form {
+    color: #242d29;
+
+    form>.row{
+        margin: 10px 0;
+        >div>* {
+            padding: 5px;
+        }
+
+        input, textarea, button {
+            border: 1.5px solid #242d29;
+            border-radius: .5rem;
+            width: 100%;
+        }
+    
+        button.cancel-btn {
+            background-color: #ebe8e8;
+            color: #242d29;
+        }
+    
+        button.save-btn {
+            background-color: #242d29;
+            color: #ebe8e8;
+        }
+    
+        button:hover {
+            opacity: .5;
+            border: 1.5px solid #242d29;
+        }
+    
+        div.dropdown {
+            padding: 0;
+
+            button {
+                background-color: #ffffff;
+                color: #000000;
+                padding: 5px;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                span.opacity-text {
+                    color: #757575;
+                }
+            }
+
+            .dropdown-menu {
+                position: relative !important;
+                transform: none !important;
+            }
+        }
+    }
+}
