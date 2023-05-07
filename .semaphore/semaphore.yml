@@ -24,7 +24,6 @@ blocks:
           - checkout
           - cache restore
           - pip install --cache-dir .pip_cache -r requirement.txt
-          - cd portfolio
           - python manage.py makemigrations
           - python manage.py migrate
           - python manage.py test
