@@ -27,3 +27,5 @@
 /api/__pycache__/*
 /portfolio/__pycache__
 /portfolio/__pycache__/*
+
+.semaphore
