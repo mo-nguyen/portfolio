@@ -9,3 +9,21 @@
     margin-top: 20px;
     font-size: 16px;
 }
+
+.edit-btn {
+    border: 1.5px solid #242d29;
+    border-radius: .5rem;
+    background-color: #242d29;
+    color: #ebe8e8;
+
+    &:hover {
+        opacity: .5;
+        border: 1.5px solid #242d29;
+        color: #ebe8e8;
+        background-color: #242d29;
+    }
+
+    a {
+        color: #ebe8e8;
+    }
+}

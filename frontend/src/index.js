@@ -11,6 +11,7 @@ import { loader as GetAllProjectsLoader } from './page/ProjectListPage';
 import { loader as ProjectFormLoader, action as ProjectFormAction } from './page/ProjectForm';
 import { loader as GetProjectByIdLoader } from './page/ProjectDetailPage';
 import ProjectForm from './page/ProjectForm';
+import ErrorPage from './page/ErrorPage';
 
 const router = createBrowserRouter([
     {
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
     {
       path: '/',
       element: <App />,
+      errorElement: <ErrorPage />,
       children: [
         {
           element: <HomePage />,
